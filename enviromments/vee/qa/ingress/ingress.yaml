@@ -9,9 +9,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: www.chamo.local 
+    http:
       paths:
-        - path: /chamo(/|$)(.*)
+        - path: /
           pathType: Prefix
           backend:
             service:
