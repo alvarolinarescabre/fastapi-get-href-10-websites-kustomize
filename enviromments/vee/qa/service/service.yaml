@@ -8,4 +8,4 @@ spec:
     targetPort: 80
     protocol: TCP
   selector:
-    app.kubernetes.io/name: fastapi-app-get-href-from-10-websites
+    app: nginx
