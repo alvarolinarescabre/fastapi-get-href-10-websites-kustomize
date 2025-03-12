@@ -27,5 +27,5 @@ spec:
   volume:
   - metadata:
       name: www
-        emptyDir:
-          sizeLimit: 500Mi
+      emptyDir:
+        sizeLimit: 500Mi
