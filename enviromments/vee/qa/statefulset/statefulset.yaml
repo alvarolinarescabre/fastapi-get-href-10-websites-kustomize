@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fastapi-app-get-href-from-10-websites
+  name: fastapi-app-get-kustomize
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app.kubernetes.io/name: fastapi-app-get-href-from-10-websites
+      app.kubernetes.io/name: fastapi-app-get-kustomize
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: fastapi-app-get-href-from-10-websites
+        app.kubernetes.io/name: fastapi-app-get-kustomize
     spec:
       containers:
       - image: ghcr.io/alvarolinarescabre/fastapi-app-get-href-from-10-websites:latest
-        name: fastapi-app-get-href-from-10-websites
+        name: fastapi-app-get-kustomize
         ports:
         - containerPort: 80
