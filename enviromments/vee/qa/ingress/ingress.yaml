@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fastapi-app-get-href-from-10-websites
+  name: fastapi-app-get-kustomize
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
@@ -14,6 +14,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: fastapi-app-get-href-from-10-websites
+              name: fastapi-app-get-kustomize
               port:
                 number: 80
