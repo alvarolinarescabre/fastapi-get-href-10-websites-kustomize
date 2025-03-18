@@ -9,6 +9,3 @@ spec:
     protocol: TCP
   selector:
     app.kubernetes.io/name: fastapi-app-get-kustomize
-  type: LoadBalancer
-  loadBalancerIP: 172.18.8.52
-  externalTrafficPolicy: Cluster
