@@ -5,9 +5,9 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
-  ingressClassName: kong
+  ingressClassName: nginx
   rules:
-  - host: kustomize.chamo.local 
+  - host: www.chamo.local 
     http:
       paths:
         - path: /
