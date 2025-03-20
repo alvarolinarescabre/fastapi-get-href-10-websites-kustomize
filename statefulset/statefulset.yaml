@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: fastapi-app-get-kustomize
+  namespace: chamo-app-to-apps
 spec:
   serviceName: "fastapi-app-get-kustomize"
   replicas: 4
