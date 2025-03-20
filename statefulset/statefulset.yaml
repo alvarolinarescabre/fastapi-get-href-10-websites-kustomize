@@ -1,23 +1,25 @@
+---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: fastapi-app-get-kustomize
 spec:
+  serviceName: "fastapi-app-get-kustomize"
   replicas: 4
-  revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app.kubernetes.io/name: fastapi-app-get-kustomize
+      app: fastapi-app-get-kustomize
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: fastapi-app-get-kustomize
+        app: fastapi-app-get-kustomize
     spec:
       containers:
-      - image: ghcr.io/alvarolinarescabre/fastapi-app-get-href-from-10-websites:latest
-        name: fastapi-app-get-kustomize
+      - name: nginx
+        image: registry.k8s.io/nginx-slim:0.21
         ports:
         - containerPort: 80
+          name: web
         volumeMounts:
         - name: www
           mountPath: /usr/share/nginx/html
@@ -29,4 +31,4 @@ spec:
       resources:
         requests:
           storage: 1Gi
-      storageClassName: standard
+
