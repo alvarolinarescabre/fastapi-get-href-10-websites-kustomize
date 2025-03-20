@@ -27,7 +27,7 @@ spec:
       initContainers:
       - name: init-create-html-index
         image: busybox:1.28
-        command: ['sh', '-c', 'echo "Hello from $(hostname) > /usr/share/nginx/html/index.html"']
+        command: ['sh', '-c', 'echo "Hello from $(hostname)" > /usr/share/nginx/html/index.html']
         volumeMounts:
         - name: www
           mountPath: /usr/share/nginx/html
