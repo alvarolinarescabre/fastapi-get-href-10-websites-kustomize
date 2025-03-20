@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: chamo-app-to-apps
+  labels:
+    name: chamo-app-to-apps
+
