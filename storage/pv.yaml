@@ -11,5 +11,5 @@ spec:
   - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: 192.168.59.1
+    server: 192.168.1.142
     path: "/mnt/my_share"
