@@ -4,12 +4,12 @@ metadata:
   name: nfs-volume
   namespace: chamo-app-to-apps
 spec:
+  storageClassName: "standard"
   capacity:
     storage: 1Gi
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: standard
   nfs:
     server: 192.168.59.1
     path: "/mnt/my_share"
