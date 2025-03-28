@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
 - namespace/namespace.yaml
 - storage/pv.yaml
-- storage/pvc.yaml
 - statefulset/statefulset.yaml
 - ingress/ingress.yaml
 - service/service.yaml
