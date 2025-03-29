@@ -36,7 +36,6 @@ spec:
       name: www
     spec:
       accessModes: [ "ReadWriteMany" ]
-      storageClassName: "standard"
       resources:
         requests:
           storage: 1Gi
