@@ -6,7 +6,7 @@ metadata:
   namespace: chamo-app-to-apps
 spec:
   serviceName: "fastapi-app-get-kustomize"
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: fastapi-app-get-kustomize
