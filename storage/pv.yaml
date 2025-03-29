@@ -4,6 +4,7 @@ metadata:
   name: nfs-volume
   namespace: chamo-app-to-apps
 spec:
+  storageClassName: standard
   capacity:
     storage: 1Gi
   accessModes:
