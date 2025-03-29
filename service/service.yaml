@@ -6,6 +6,7 @@ metadata:
   namespace: chamo-app-to-apps
 spec:
   type: LoadBalancer
+  loadBalancerClass: kube-vip.io/kube-vip-class
   ports:
   - port: 80
     targetPort: 80
