@@ -7,6 +7,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
+  loadBalancerClass: kube-vip.io/kube-vip-class
   ingressClassName: kong
   rules:
   - host: www.chamo.local 
