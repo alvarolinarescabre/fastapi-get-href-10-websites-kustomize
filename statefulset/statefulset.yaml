@@ -35,7 +35,7 @@ spec:
   - metadata:
       name: www
     spec:
-      storageClassName: standard
+      storageClassName: csi-hostpath-sc
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
