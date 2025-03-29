@@ -35,6 +35,7 @@ spec:
   - metadata:
       name: www
     spec:
+      storageClassName: standard
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
