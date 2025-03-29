@@ -4,7 +4,7 @@ metadata:
   name: nfs-volume
   namespace: chamo-app-to-apps
 spec:
-  storageClassName: standard
+  storageClassName: csi-hostpath-sc
   capacity:
     storage: 1Gi
   accessModes:
