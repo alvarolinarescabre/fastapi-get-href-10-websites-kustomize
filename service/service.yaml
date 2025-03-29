@@ -5,6 +5,7 @@ metadata:
   name: fastapi-app-get-kustomize
   namespace: chamo-app-to-apps
 spec:
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 80
