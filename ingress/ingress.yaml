@@ -2,8 +2,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fastapi-app-get-kustomize
-  namespace: chamo-app-to-apps
+  name: nginx-ingress
+  namespace: chamo
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
@@ -16,6 +16,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: fastapi-app-get-kustomize
+              name: nginx-service
               port:
                 number: 80
