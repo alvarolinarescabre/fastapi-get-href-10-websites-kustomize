@@ -35,7 +35,7 @@ spec:
   - metadata:
       name: www
     spec:
-      storageClassName: csi-hostpath-sc
+      storageClassName: nfs-client
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
