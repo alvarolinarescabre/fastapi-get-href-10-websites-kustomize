@@ -7,7 +7,7 @@ metadata:
 spec:
   type: LoadBalancer
   loadBalancerClass: kube-vip.io/kube-vip-class
-  loadBalancerIP: 0.0.0.0
+  loadBalancerIP: 172.18.8.1
   ports:
   - port: 80
     targetPort: 80
