@@ -27,4 +27,4 @@ spec:
         - name: nfs-www
           nfs: 
             server: 172.18.8.254
-            path: /vat/www
+            path: /tmp/www
