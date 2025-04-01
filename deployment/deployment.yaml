@@ -1,11 +1,10 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     app: nginx
   name: nginx
-  namespace: chamo-app-to-apps
+  namespace: chamo
 spec:
   replicas: 1
   selector:
@@ -23,5 +22,5 @@ spec:
       - image: nginx
         name: nginx
         volumeMounts:
-        - name: nfs-www 
-          mountPath: /usr/share/nginx/html
+          - name: nfs-www 
+            mountPath: /usr/share/nginx/html

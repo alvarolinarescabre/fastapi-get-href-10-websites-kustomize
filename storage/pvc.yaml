@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: nfs-pvc
-  namespace: chamo-app-to-apps
+  namespace: chamo
 spec:
   accessModes:
     - ReadWriteOnce
