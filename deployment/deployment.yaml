@@ -14,8 +14,6 @@ spec:
     metadata:
       labels:
         app: nginx
-      name: nginx
-      namespace: chamo
     spec:
       volumes:
       - name: nfs-www
