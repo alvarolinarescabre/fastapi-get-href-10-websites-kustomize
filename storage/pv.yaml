@@ -1,14 +1,11 @@
 apiVersion: v1
-kind: PersistentVolume
+kind: PersistentVolumeClaim
 metadata:
-  name: nfs-volume
+  name: nfs-pvc
 spec:
-  capacity:
-    storage: 1Gi
   accessModes:
-  - ReadWriteMany
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: standard
-  nfs:
-    server: 192.168.59.1
-    path: "/mnt/my_share"
+    - ReadWriteOnce
+  storageClassName: nfs-storage
+  resources:
+    requests:
+      storage: 1Gi
