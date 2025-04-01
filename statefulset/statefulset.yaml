@@ -1,36 +1,26 @@
 ---
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
-  name: fastapi-app-get-kustomize
-  namespace: chamo-app-to-apps
+  labels:
+    app: nginx
+  name: nfs-nginx
 spec:
-  serviceName: "fastapi-app-get-kustomize"
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
-      app: fastapi-app-get-kustomize
+      app: nginx
   template:
     metadata:
       labels:
-        app: fastapi-app-get-kustomize
+        app: nginx
     spec:
-      containers:
-      - name: nginx
-        image: registry.k8s.io/nginx-slim:0.21
-        ports:
-        - containerPort: 80
-          name: web
+      volumes:
+      - name: nfs-www
+        persistentVolumeClaim:
+          claimName: nfs-storage
+      - image: nginx
+        name: nginx
         volumeMounts:
-        - name: www
+        - name: nfs-www 
           mountPath: /usr/share/nginx/html
-  volumeClaimTemplates:
-  - metadata:
-      name: www
-    spec:
-      storageClassName: nfs-client
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 1Gi
-
