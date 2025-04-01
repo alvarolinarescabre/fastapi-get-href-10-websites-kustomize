@@ -1,15 +1,10 @@
+kind: PersistentVolumeClaim
 apiVersion: v1
-kind: PersistentVolume
 metadata:
   name: nfs-pvc
-  namespace: chamo
 spec:
-  capacity:
-    storage: 1Gi
   accessModes:
     - ReadWriteMany
-  persistentVolumeReclaimPolicy: Retain
-  nfs:
-    path: "/tmp/www/"
-    server: "172.18.8.254"
-    readOnly: false
+  resources:
+    requests:
+      storage: 1Gi
