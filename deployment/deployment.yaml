@@ -18,7 +18,7 @@ spec:
       volumes:
       - name: nfs-www
         persistentVolumeClaim:
-          claimName: nfs-storage
+          claimName: nfs-client
       - image: nginx
         name: nginx
         volumeMounts:
