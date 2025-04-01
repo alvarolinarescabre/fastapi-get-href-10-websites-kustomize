@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fastapi-app-get-kustomize
+  name: nginx-svc
   namespace: chamo
 spec:
   type: LoadBalancer
