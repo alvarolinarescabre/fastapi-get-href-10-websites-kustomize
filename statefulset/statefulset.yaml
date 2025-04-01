@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   labels:
     app: nginx
-  name: nfs-nginx
+  name: nginx
   namespace: chamo-app-to-apps
 spec:
   replicas: 1
