@@ -23,7 +23,7 @@ spec:
       volumes:
       - name: nfs-www
         persistentVolumeClaim:
-          claimName: nfs-client
+          claimName: nfs-pvc
       - image: nginx
         name: nginx
         volumeMounts:
