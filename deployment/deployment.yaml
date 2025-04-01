@@ -20,12 +20,10 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
+        volumeMounts:
+          - name: nfs-www 
+            mountPath: /usr/share/nginx/html
       volumes:
       - name: nfs-www
         persistentVolumeClaim:
           claimName: nfs-pvc
-      - image: nginx
-        name: nginx
-        volumeMounts:
-          - name: nfs-www 
-            mountPath: /usr/share/nginx/html
