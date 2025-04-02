@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: nginx-deployment
+  namespace: chamo
   labels:
     app: nginx
-  name: nginx
-  namespace: chamo
 spec:
   replicas: 1
   selector:
@@ -15,12 +15,15 @@ spec:
       labels:
         app: nginx
     spec:
-      volumes:
-      - name: nfs-www
-        persistentVolumeClaim:
-          claimName: nfs-client
-      - image: nginx
-        name: nginx
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
         volumeMounts:
           - name: nfs-www 
             mountPath: /usr/share/nginx/html
+      volumes:
+        - name: nfs-www
+          persistentVolumeClaim:
+            claimName: nfs-pvc

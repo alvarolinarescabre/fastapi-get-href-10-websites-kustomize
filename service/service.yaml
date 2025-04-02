@@ -2,14 +2,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fastapi-app-get-kustomize
+  name: nginx-service
   namespace: chamo
 spec:
   type: LoadBalancer
   loadBalancerClass: kube-vip.io/kube-vip-class
+  loadBalancerIP: 172.18.8.1
   ports:
   - port: 80
     targetPort: 80
     protocol: TCP
   selector:
-    app: nginx
+    app.kubernetes.io/name: nginx-deployment
