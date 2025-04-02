@@ -4,6 +4,9 @@ metadata:
   name: nfs-pvc
   namespace: chamo
 spec:
+  selector:
+    matchLabels:
+      app: nginx
   accessModes:
     - ReadWriteMany
   resources:
