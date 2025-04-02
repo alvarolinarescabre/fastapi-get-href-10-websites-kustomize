@@ -10,6 +10,6 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    path: "/tmp/www/"
+    path: "/mnt/www/"
     server: "172.18.8.254"
     readOnly: false
