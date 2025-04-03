@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:alpine
+        image: 172.18.8.254:5000/fastapi:v1.0
         ports:
         - containerPort: 80
         volumeMounts:
