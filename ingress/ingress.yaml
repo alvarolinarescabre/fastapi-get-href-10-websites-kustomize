@@ -5,7 +5,7 @@ metadata:
   name: chamo-ingress
   namespace: chamo
   annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    konghq.com/strip-path: 'true'    
 spec:
   ingressClassName: kong
   rules:
