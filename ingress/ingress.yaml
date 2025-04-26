@@ -3,9 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: chamo-ingress
-  namespace: chamo
-  annotations:
-    konghq.com/strip-path: 'true'    
+  namespace: chamo   
 spec:
   ingressClassName: nginx
   rules:
