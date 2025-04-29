@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: ghcr.io/alvarolinarescabre/fastapi-app-get-href-from-10-websites:v1.2.0
+        image: ghcr.io/alvarolinarescabre/fastapi-app-get-href-from-10-websites:v1.3.0
         ports:
         - containerPort: 80
         volumeMounts:
