@@ -4,6 +4,8 @@ kind: Ingress
 metadata:
   name: chamo-ingress
   namespace: chamo
+  annotations:
+    konghq.com/strip-path: "true"
 spec:
   ingressClassName: kong
   rules:
